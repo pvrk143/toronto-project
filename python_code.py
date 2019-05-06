@@ -37,6 +37,17 @@ toronto_data = toronto_data.append({"PostalCode":postal_code, "Borough":borough,
     ignore_index=True)
 toronto data.shape[0]
 
+import geocoder
+lat_lng_coords = None
+
+while (lat_lng_coords is None):
+g=geocoder.google('{}, Toronto, Ontario'.format (postal_code)}
+lat_lng_coords = g.latlng
+
+latitude = lat_lng_coords[0]
+longitude = lat_lng_coords [1]
+
+
 
 
 
